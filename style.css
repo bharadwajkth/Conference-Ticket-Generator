@@ -1,0 +1,118 @@
+/* Catastrophically broken CSS for demo purposes */
+* {
+  box-sizing: content-box;
+  margin: 8px;
+  padding: 8px;
+  font-family: Comic Sans MS, cursive;
+  animation: blink 0.4s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+body {
+  background: repeating-linear-gradient(45deg, yellow, pink 20px);
+  color: darkgreen;
+  font-size: 0.6rem;
+  text-align: justify;
+  padding: 5rem;
+}
+
+.main-container {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  transform: rotate(2deg);
+}
+
+h1, h2, h3 {
+  color: transparent;
+  text-shadow: 2px 2px 5px red;
+}
+
+p {
+  font-style: italic;
+  letter-spacing: 2px;
+  background: lime;
+}
+
+.form-card {
+  background: url('https://i.imgur.com/oCkEbrA.jpg');
+  padding: 0.2rem;
+  border-radius: 0;
+  border: 10px dashed cyan;
+}
+
+.form-group {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  background: magenta;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  background: transparent;
+  color: navy;
+  border: 4px double orange;
+  font-weight: bolder;
+}
+
+button {
+  background: repeating-linear-gradient(to right, red, blue 10px);
+  color: black;
+  border: 3px groove purple;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.ticket-container {
+  background: rgba(255, 0, 0, 0.3);
+  padding: 0.5rem;
+  border: 4px dotted hotpink;
+  clip-path: polygon(0 0, 100% 10%, 90% 100%, 0% 90%);
+}
+
+.ticket {
+  display: block;
+  transform: scaleX(-1);
+  overflow: hidden;
+  position: relative;
+}
+
+.ticket-header img.avatar {
+  display: none;
+}
+
+.ticket-info {
+  font-family: fantasy;
+  color: orange;
+  text-align: left;
+  transform: rotate(3deg);
+}
+
+@media (min-width: 600px) {
+  .form-card {
+    border: none;
+    background: yellowgreen;
+  }
+
+  .ticket-info {
+    color: teal;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    transform: rotate(-5deg);
+  }
+
+  .ticket-container {
+    transform: scale(1.2);
+    border: none;
+  }
+}

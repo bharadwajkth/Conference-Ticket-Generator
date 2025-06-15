@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/images/favicon-32x32.png" />
+  <title>Frontend Mentor | Conference ticket generator</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <section class="form-card">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+      <form>
+        <div class="form-group">
+          <label for="avatar">Upload Avatar</label>
+          <input type="file" id="avatar" accept="image/png, image/jpeg" />
+          <p class="input-hint">Upload your photo (JPG or PNG, max size: 500KB).</p>
+        </div>
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" placeholder="@yourusername" required />
+        </div>
+
+        <button type="submit">Generate My Ticket</button>
+      </form>
+    </section>
+
+    <section class="ticket-container" style="display:none">
+      <div class="ticket">
+        <div class="ticket-header">
+          <img src="" alt="User Avatar" class="avatar" />
+          <div>
+            <h2>Congrats, <span class="ticket-name"></span>!</h2>
+            <p>Your ticket is ready.</p>
+          </div>
+        </div>
+        <p class="ticket-email-wrapper">We've emailed your ticket to <span class="ticket-email"></span> and will send updates in the run up to the event.</p>
+        <div class="ticket-info">
+          <h3>Coding Conf</h3>
+          <p>Bangalore, India</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
