@@ -47,7 +47,7 @@ form.addEventListener('submit', (e) => {
     ticketNameSpan.textContent = fullName;
     ticketEmailSpan.textContent = email;
     form.style.display = 'none';
-    ticketContainer.style.display = 'block';
+    ticketContainer.style.display = 'flex';
   };
   reader.readAsDataURL(avatarFile);
 });
